@@ -2,10 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ofpay</groupId>
-		<artifactId>ofpay</artifactId>
-		<version>1.1.0</version>
-		<relativePath>../../</relativePath>
+        <groupId>com.ofpay</groupId>
+        <artifactId>of-parent</artifactId>
+        <version>1.1.2.2-RELEASE</version>
 	</parent>
 
 	<groupId>com.ofpay.rex.modules</groupId>
@@ -42,4 +41,20 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <url>http://nexus.dev.ofpay.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
 </project>
