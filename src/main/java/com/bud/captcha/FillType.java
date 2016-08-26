@@ -1,4 +1,4 @@
-package com.ofpay.rex.captcha;
+package com.bud.captcha;
 
 public enum FillType {
 

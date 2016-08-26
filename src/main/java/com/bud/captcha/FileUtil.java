@@ -1,4 +1,4 @@
-package com.ofpay.rex.captcha;
+package com.bud.captcha;
 
 import java.io.File;
 import java.io.FileNotFoundException;

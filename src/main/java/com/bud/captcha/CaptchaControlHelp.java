@@ -1,4 +1,4 @@
-package com.ofpay.rex.captcha;
+package com.bud.captcha;
 
 import java.util.UUID;
 import java.util.concurrent.TimeoutException;

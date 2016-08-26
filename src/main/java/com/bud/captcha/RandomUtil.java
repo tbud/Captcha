@@ -1,4 +1,4 @@
-package com.ofpay.rex.captcha;
+package com.bud.captcha;
 
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.math.RandomUtils;
@@ -6,7 +6,7 @@ import org.apache.commons.lang.math.RandomUtils;
 public class RandomUtil {
     /**
      * 最小的字长（非字典随机文本生成） 最大字数 (非字典随机文本生成)
-     * 
+     * <p>
      * 用于字典的话，表示字长 修改字体大小的目的
      */
     private static int minWordLength = 4;
@@ -18,7 +18,7 @@ public class RandomUtil {
 
     /**
      * 文本生成
-     * 
+     *
      * @return
      */
     public static String getCaptchaText() {
@@ -48,7 +48,7 @@ public class RandomUtil {
 
     /**
      * 随机文本生成
-     * 
+     *
      * @param length
      * @return
      */
