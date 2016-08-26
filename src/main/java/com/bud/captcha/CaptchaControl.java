@@ -61,12 +61,6 @@ public class CaptchaControl implements ICaptchaControl, Serializable {
         return ccfg;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.ofpay.rex.captcha.ICaptchaControl#checkCaptcha(java.lang.String)
-     */
-    @Override
     public boolean checkCaptcha(String captchaText) {
         logger.debug("CurrentText={}, inputCaptchaText={}", currentText, captchaText);
         // 刚刚初始化，还没有生产任何图片时，currentText会为null。
@@ -88,13 +82,6 @@ public class CaptchaControl implements ICaptchaControl, Serializable {
         return bRet;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.ofpay.rex.captcha.ICaptchaControl#drawImage(java.io.OutputStream)
-     */
-    @Override
     public void drawImage(DrawCaptcha dc, OutputStream os) {
         if (null == dc || null == os) {
             return;
@@ -103,7 +90,6 @@ public class CaptchaControl implements ICaptchaControl, Serializable {
         dc.createImage(getText(), os, getCaptchaConfig(dc.getCaptchaConfig()));
     }
 
-    @Override
     public boolean isTimeout() {
         Date currentDate = new Date();
         int interval = (int) ((currentDate.getTime() - createTime) / 1000);
@@ -111,14 +97,12 @@ public class CaptchaControl implements ICaptchaControl, Serializable {
         return interval > expSeconds;
     }
 
-    @Override
     public void setExpSeconds(int expSeconds) {
         if (expSeconds > 0) {
             this.expSeconds = expSeconds;
         }
     }
 
-    @Override
     public int getExpSeconds() {
         return expSeconds;
     }
